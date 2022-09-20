@@ -40,5 +40,5 @@ fn get_all_words(path: &str) -> String {
         .read_to_string(&mut str)
         .expect("Unable to read line");
 
-    return str;
+   str
 }
