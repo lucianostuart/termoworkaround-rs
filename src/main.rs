@@ -1,6 +1,5 @@
 use clap::Parser;
 use regex::Regex;
-use std::env;
 use std::fs::File;
 use std::io::{BufReader, Read};
 
@@ -8,13 +7,13 @@ use std::io::{BufReader, Read};
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
 struct Args {
-    /// Name of the person to greet
+    /// Correct letter
     #[clap(short = 'c', long, value_parser)]
-    correct_words: String,
+    correct_letter: String,
 
-    /// Number of times to greet
+    /// Wrong letters
     #[clap(short = 'w', long, value_parser)]
-    wrong_words: String,
+    wrong_letter: String,
 }
 
 fn main() {
